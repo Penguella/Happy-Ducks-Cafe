@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Happy Ducks Café</title>
+        <link rel="stylesheet" type="text/css" href="file.css"> 
+        <style>
+            p{
+                color:rgb(0, 0, 0);
+                font-size: 24px;
+            }
+            .popup{
+                text-align:center;
+                width:400px;
+                height:250px;
+                background-color:#ffffff ;
+                border-radius: 6px;
+                position:absolute;
+                top:50%;
+                left:170%;
+                transform: translate(-50%,-50%);
+                text-align: center;
+                padding: 0 30px 30px;
+                visibility: hidden;
+                transition: transform 0.4s, top 0.4s;
+            }
+          .open-popup{
+              visibility: visible;
+              transform: translate(-50%,-50%);
+          }
+        </style>
+    </head>
+    <header>
+        <div class="container">
+        <h1>Welcome to our café!</h1>
+        <h2>If you're searching for a place to peacefully drink your coffee - or any beverage from our menu- in a lovely decor while listening to nice music, this is the best place in Craiova for you.</h2>
+        </div>
+    </header>
+    <section>
+        <button onclick="window.location.href='home.html';">Home</button>
+        <button onclick="window.location.href='menu.html';">Menu</button>
+        <button onclick="window.location.href='reserve.html';">Reserve a table</button>
+        <button onclick="window.location.href='virtual.html';">Virtual café</button>
+        <button onclick="window.location.href='acc.html';">My account</button>
+        <button onclick="window.location.href='prom.html';">Upcoming promotions</button>
+        <button onclick="window.location.href='review.html';">Review</button>
+    </section>
+    <body>
+           <!--This page will allow the user to reserve a table ( max seats = 4 ) and to add the expenses of that table to their account to increase
+            their points for the promotions. Since we have no real record of our user's order history, what you see now is a test build-->
+            <div class="container">
+                <div class="card">
+                    <div class="popup" id="popup">
+                        <img src="okbg.png">
+                        <h2>Your reservation was successfull! We can't wait to see you!</h2>
+                        <button type="button" onclick="closePopup()">Nice</button>
+                    </div>
+                    <div class="inner-box" id="card">
+                        <div class="card-front">
+                            <form>
+                                <input type="text" class="input-box" placeholder="Your phone" required>
+                                <input type="emai" class="input-box" placeholder="Your email" required>
+                                <input type="text" class="input-box" placeholder="Your name" required>
+                                <br>
+                                <p><b>I would like a table for: </b></p>
+                                <input type="checkbox"><span>Me ( 1 person)</span>  <br>
+                                <input type="checkbox"><span>Me + 1 person</span>  <br>
+                                <input type="checkbox"><span>Me + 2 persons</span>  <br>
+                                <input type="checkbox"><span>Me + 3 persons</span>  <br><br>
+                            </form>
+                            <button type="submit" class="submit-btn" onclick="openPopup()">Confirm registration</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script>
+                let popup=document.getElementById("popup");
+                function openPopup(){
+                    popup.classList.add("open-popup");
+                }
+                function closePopup(){
+                    popup.classList.remove("open-popup");
+                }
+            </script>
+    </body>
+</html>

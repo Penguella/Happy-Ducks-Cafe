@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Happy Ducks Café</title>
+        <link rel="stylesheet" type="text/css" href="file.css"> 
+        <style>
+            img{
+                width:200px;
+                border-radius: 100px;
+                float:left;
+            }
+            .container1 {
+                background-color: #fff;
+                color:black;
+                font-size:20px;
+                margin: 0;
+                text-align: center;
+                border-radius: 5px;
+                padding: 10px 12px;
+            }
+        </style>
+    </head>
+    <header>
+        <div class="container">
+        <h1>Welcome to our café!</h1>
+        <h2>If you're searching for a place to peacefully drink your coffee - or any beverage from our menu- in a lovely decor while listening to nice music, this is the best place in Craiova for you.</h2>
+        </div>
+    </header>
+    <section>
+        <button onclick="window.location.href='home.html';">Home</button>
+        <button onclick="window.location.href='menu.html';">Menu</button>
+        <button onclick="window.location.href='reserve.html';">Reserve a table</button>
+        <button onclick="window.location.href='virtual.html';">Virtual café</button>
+        <button onclick="window.location.href='acc.html';">My account</button>
+        <button onclick="window.location.href='prom.html';">Upcoming promotions</button>
+        <button onclick="window.location.href='review.html';">Reviews</button>
+    </section>
+    <body>
+      <div class="container1">
+        <br>
+        <img src="profile.jpg"> <br>
+        <h1>Your profile</h1><br>
+        <h1>Username:   Test Name</h1><br>
+        <h1>Phone:  0xxx-xxx-xxx</h1> <br>
+        <h1>Email:   email@yahoo.com</h1><br>
+        <button onclick="window.location.href='home.html';">Log out</button>
+        <button>See my past orders</button> <!--This would be updated to show the order history for the customer logged in; every customer
+        with an account will have the past orders stored in a database -->
+        <button onclick="window.location.href='edit.html';">Edit my profile</button> <!--The customer will be able to change all their info if 
+        they desire without losing the account anytime. The data base would be updated as well-->
+      </div>
+    </body>
+</html>
